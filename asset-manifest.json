@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/JonasPC18/meu-portfolio/static/css/main.57b38313.css",
+    "main.js": "/JonasPC18/meu-portfolio/static/js/main.5dff278b.js",
+    "static/js/453.f50d33b3.chunk.js": "/JonasPC18/meu-portfolio/static/js/453.f50d33b3.chunk.js",
+    "index.html": "/JonasPC18/meu-portfolio/index.html",
+    "main.57b38313.css.map": "/JonasPC18/meu-portfolio/static/css/main.57b38313.css.map",
+    "main.5dff278b.js.map": "/JonasPC18/meu-portfolio/static/js/main.5dff278b.js.map",
+    "453.f50d33b3.chunk.js.map": "/JonasPC18/meu-portfolio/static/js/453.f50d33b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57b38313.css",
+    "static/js/main.5dff278b.js"
+  ]
+}
