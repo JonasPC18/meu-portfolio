@@ -32,7 +32,7 @@ export default function CodeBlock({ folder, file }) {
 
   //Rolagem horizontal + vertical e altura máxima
   return (
-    <pre class="rounded-xl overflow-x-auto overflow-y-auto max-h-[60vh] text-sm">
+    <pre class="rounded-xl overflow-x-auto overflow-y-auto max-h-[40vh] text-sm">
       <code ref={ref} className={`language-${detectLanguage(file)}`}>
         {code}
       </code>

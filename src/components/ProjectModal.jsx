@@ -13,7 +13,8 @@ export default function ProjectModal({ project, onClose }) {
 
   return (
     <div className="fixed inset-0 z-40 bg-black/70 flex items-center justify-center">
-      <div className="bg-[#232946] w-full h-full sm:h-auto sm:max-h-[90vh] sm:max-w-3xl sm:rounded-2xl p-6 sm:p-8 shadow-xl relative flex flex-col">
+      <div className="bg-[#232946] w-full h-full sm:h-auto sm:max-h-[90vh] sm:max-w-3xl sm:rounded-2xl p-6 sm:p-8 shadow-xl relative flex flex-col overflow-y-auto sm:overflow-y-visible">
+
         {/* botão fechar */}
         <button
           onClick={onClose}

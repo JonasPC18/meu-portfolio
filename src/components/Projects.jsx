@@ -29,7 +29,7 @@ export default function Projects() {
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ delay: i * 0.1 }}
             className="bg-[#232946] rounded-2xl p-6 shadow-md flex flex-col"
           >
