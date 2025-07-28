@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import profileImg from "../assets/profile.jpg";
 
 const container = {
   hidden: {},
@@ -22,21 +23,23 @@ export default function Hero() {
       animate="show"              
       >
       
-<motion.img
-  src="profile.jpg"
-  alt="Foto de Jonas"
-  className="
-    w-40 h-40 md:w-48 md:h-48
-    rounded-full object-cover      
-    ring-4 ring-white             
-    ring-offset-2 ring-offset-[#f1deff]  
-    shadow-xl shadow-[#f1deff]/60  
-  "
-  variants={{
-    hidden: { opacity: 0, x: -40 },
-    show:   { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  }}
-/>
+        <motion.img
+          src={profileImg}
+          alt="Foto de Jonas"
+          className="
+            w-40 h-40 md:w-48 md:h-48
+            rounded-full object-cover
+            border-2 border-[#f1deff] shadow-lg
+          "
+          variants={{
+            hidden: { opacity: 0, x: -40 },
+            show: {
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.6, ease: "easeOut" },
+            },
+          }}
+        />
 
       <motion.div className="max-w-2xl text-center md:text-left" variants={fadeUp}>
         <motion.h2
