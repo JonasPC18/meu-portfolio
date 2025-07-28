@@ -27,7 +27,7 @@ export default function Header() {
                      bg-[#16161a]/80 border-b border-[#26262b]"
         >
           <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="/" className="text-xl font-bold text-[#7f5af0]">Portfólio · Jonas Costa</a>
+            <a href="/" className="text-xl font-bold text-[#7f5af0]">Portfólio</a>
 
             <ul className="flex gap-6 text-sm font-medium text-[#eaeaea]">
               <li><a href="#projects" className="hover:text-[#7f5af0]">Projetos</a></li>

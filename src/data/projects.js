@@ -1,6 +1,7 @@
 const projects = [
   {
     name: "Jogo_A_Caixinha",
+    featured: true, 
     folder: "A_Caixinha_COMPLETO",
     files: [
       "Basicas.js",
@@ -22,6 +23,7 @@ const projects = [
 
     {
     name: "Jogo_A_Caixinha",
+    featured: true, 
     folder: "A_Caixinha_COMPLETO",
     files: [
       "Basicas.js",

@@ -22,16 +22,41 @@ export default function Hero() {
       animate="show"              
       >
       
+{/* FOTO com círculo gradiente tipo referência */}
+<motion.div
+  variants={{
+    hidden: { opacity: 0, x: -40 },
+    show:   { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  }}
+  className="relative isolate"
+>
+  {/* Borda externa brilhante (efeito glow) */}
+  <span
+    aria-hidden
+    className="absolute inset-0 -z-10 rounded-full
+               bg-gradient-to-tr from-[#6f54bd] via-[#5d4fee] to-[#0ccffc]
+               opacity-40 blur-[6px]"
+  />
+
+  {/* Anel fino com gradiente */}
+  <div
+    className="relative p-[3px] rounded-full
+               bg-gradient-to-tr from-[#6f54bd] via-[#5d4fee] to-[#0ccffc]"
+  >
+    {/* Círculo interno onde vai a foto + gradiente de fundo */}
+    <div
+      className="relative overflow-hidden rounded-full
+                 bg-gradient-to-tr from-[#9852e4] via-[#5e5afc] to-[#00bcff]"
+    >
       <motion.img
         src="profile.jpg"
         alt="Foto de Jonas"
-        className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover
-                   border-2 border-[#f1deff] shadow-lg"
-        variants={{
-          hidden: { opacity: 0, x: -40 },
-          show:   { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
-        }}
+        className="w-40 h-40 md:w-48 md:h-48 object-cover mix-blend-normal"
       />
+    </div>
+  </div>
+</motion.div>
+
 
       <motion.div className="max-w-2xl text-center md:text-left" variants={fadeUp}>
         <motion.h2
