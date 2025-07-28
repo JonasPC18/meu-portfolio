@@ -38,7 +38,7 @@ export default function Box({
     <div
       {...rest}
       className={`rounded-2xl p-6 shadow-md
-                  bg-[#141034] text-[#eaeaea] ${className}`}
+                  bg-[#323649] text-[#eaeaea] ${className}`}
     >
       {children}
     </div>

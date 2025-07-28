@@ -22,41 +22,21 @@ export default function Hero() {
       animate="show"              
       >
       
-<motion.div
+<motion.img
+  src="profile.jpg"
+  alt="Foto de Jonas"
+  className="
+    w-40 h-40 md:w-48 md:h-48
+    rounded-full object-cover      
+    ring-4 ring-white             
+    ring-offset-2 ring-offset-[#f1deff]  
+    shadow-xl shadow-[#f1deff]/60  
+  "
   variants={{
     hidden: { opacity: 0, x: -40 },
     show:   { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
   }}
-  /* 1️⃣ força LARGURA = ALTURA  */
-  className="relative isolate w-40 h-40 md:w-48 md:h-48"
->
-  {/* Glow externo */}
-  <span
-    aria-hidden
-    className="absolute inset-0 -z-10 rounded-full
-               bg-gradient-to-tr from-[#6f54bd] via-[#5d4fee] to-[#0ccffc]
-               opacity-40 blur-[6px]"
-  />
-
-  {/* Anel fino */}
-  <div
-    className="relative p-[3px] rounded-full w-full h-full
-               bg-gradient-to-tr from-[#6f54bd] via-[#5d4fee] to-[#0ccffc]"
-  >
-    {/* Disco interno */}
-    <div
-      className="relative w-full h-full overflow-hidden rounded-full
-                 bg-gradient-to-tr from-[#9852e4] via-[#5e5afc] to-[#00bcff]"
-    >
-      {/* 2️⃣ foto cobre tudo */}
-      <motion.img
-        src="profile.jpg"
-        alt="Foto de Jonas"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
-</motion.div>
+/>
 
       <motion.div className="max-w-2xl text-center md:text-left" variants={fadeUp}>
         <motion.h2
