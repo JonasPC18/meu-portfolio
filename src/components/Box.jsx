@@ -1,4 +1,3 @@
-// src/components/Box.jsx
 import { motion } from "framer-motion";
 
 export default function Box({
@@ -7,26 +6,26 @@ export default function Box({
   children,
   ...rest
 }) {
-  // --- Caixinha de destaque -------------------------------------------
   if (variant === "highlight") {
     return (
       <motion.div
         {...rest}
-        className={`relative p-[2px] rounded-3xl
-                    bg-gradient-to-br from-[#4240c6] to-[#6f54bd]
+        className={`relative p-[2px] rounded-2xl
+                    bg-gradient-to-br from-[#7F5AF0] to-[#2CBDFE]
+                    shadow-[0_0_20px_rgba(127,90,240,0.4)]
                     ${className}`}
       >
         <div
-          className="relative overflow-hidden rounded-3xl
-                     bg-gradient-to-br from-[#10101A] via-[#141425] to-[#1A1940]
+          className="relative overflow-hidden rounded-2xl
+                     bg-gradient-to-br from-[#0F0F1C] via-[#15162A] to-[#1A1B3D]
                      px-6 py-10 md:px-12"
         >
-          {/* Overlay com blur interno */}
+          {/* Inner glow overlay */}
           <span
             aria-hidden
             className="pointer-events-none absolute inset-0 -z-10
-                       bg-gradient-to-br from-[#4240c6] to-[#6f54bd]
-                       opacity-25 blur-2xl"
+                       bg-gradient-to-br from-[#7F5AF0] to-[#2CBDFE]
+                       opacity-20 blur-2xl"
           />
           {children}
         </div>
@@ -34,7 +33,7 @@ export default function Box({
     );
   }
 
-  // --- Caixinha normal -------------------------------------------------
+  // Default (normal) box
   return (
     <div
       {...rest}

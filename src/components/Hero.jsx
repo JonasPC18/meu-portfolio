@@ -22,16 +22,29 @@ export default function Hero() {
       animate="show"              
       >
       
-      <motion.img
-        src="profile.jpg"
-        alt="Foto de Jonas"
-        className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover
-                   border-2 border-[#f1deff] shadow-lg"
-        variants={{
-          hidden: { opacity: 0, x: -40 },
-          show:   { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
-        }}
-      />
+<motion.div
+  className="relative w-44 h-44 md:w-52 md:h-52 rounded-full
+             bg-gradient-to-br from-[#7F5AF0] to-[#2CBDFE]
+             p-[3px] shadow-[0_0_25px_rgba(127,90,240,0.5)]"
+  variants={{
+    hidden: { opacity: 0, x: -40 },
+    show:   { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  }}
+>
+  {/* Círculo interno com gradiente mais escuro */}
+  <div className="w-full h-full rounded-full bg-gradient-to-br
+                  from-[#10101A] via-[#141425] to-[#1A1940]
+                  flex items-center justify-center">
+    
+    {/* Imagem de perfil */}
+    <motion.img
+      src="profile.jpg"
+      alt="Foto de Jonas"
+      className="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover
+                 border-2 border-white/10 shadow-inner"
+    />
+  </div>
+</motion.div>
 
       <motion.div className="max-w-2xl text-center md:text-left" variants={fadeUp}>
         <motion.h2
