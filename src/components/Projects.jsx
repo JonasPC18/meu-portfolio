@@ -27,6 +27,27 @@ export default function Projects() {
       transition={{ delay: i * 0.1 }}
       className="bg-[#232946] rounded-2xl p-6 shadow-md flex flex-col"
     >
+
+{proj.thumb && (
+  <div className="relative aspect-video rounded-xl overflow-hidden mb-4 bg-black/40">
+    <video
+      src={proj.thumb}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      disablePictureInPicture
+      controls={false}
+      controlsList="nodownload noplaybackrate noremoteplayback nofullscreen"
+      className="h-full w-full object-cover pointer-events-none select-none"
+      tabIndex={-1}
+      aria-hidden="true"
+      onContextMenu={(e) => e.preventDefault()}
+    />
+  </div>
+)}
+
       <h4 className="text-xl font-semibold text-white mb-2">
         {proj.name}
       </h4>

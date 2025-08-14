@@ -1,8 +1,12 @@
+import thumbDitto from "../assets/thumbs/ditto-morto-site.mp4";
+import thumbNizz from "../assets/thumbs/nizz-shop-site.mp4";
+
 const projects = [
   {
     name: "Jogo_A_Caixinha",
     featured: true, 
     folder: "A_Caixinha_COMPLETO",
+    thumb: thumbDitto,
     files: [
       "Basicas.js",
       "FerramentasDemo.js",
@@ -19,12 +23,14 @@ const projects = [
     `,
     tech: ["JavaScript", "Node"],
     link: "..."
+    
   },
 
     {
     name: "Jogo_A_Caixinha",
     featured: true, 
     folder: "A_Caixinha_COMPLETO",
+    thumb: thumbNizz,
     files: [
       "Basicas.js",
       "FerramentasDemo.js",
@@ -45,6 +51,7 @@ const projects = [
 
     {
     name: "Jogo_A_Caixinha",
+    featured: true,
     folder: "A_Caixinha_COMPLETO",
     files: [
       "Basicas.js",
@@ -66,6 +73,7 @@ const projects = [
 
     {
     name: "Jogo_A_Caixinha",
+    featured: true,
     folder: "A_Caixinha_COMPLETO",
     files: [
       "Basicas.js",
@@ -87,6 +95,7 @@ const projects = [
 
     {
     name: "Jogo_A_Caixinha",
+    featured: true,
     folder: "A_Caixinha_COMPLETO",
     files: [
       "Basicas.js",
@@ -108,6 +117,7 @@ const projects = [
 
     {
     name: "Jogo_A_Caixinha",
+    featured: true,
     folder: "A_Caixinha_COMPLETO",
     files: [
       "Basicas.js",
