@@ -1,5 +1,6 @@
 import thumbDitto from "../assets/thumbs/ditto-morto-site.mp4";
 import thumbNizz from "../assets/thumbs/nizz-shop-site.mp4";
+import thumbSeries from "../assets/thumbs/series-watchbook-site.mp4";
 
 const projects = [
   {
@@ -53,6 +54,7 @@ const projects = [
     name: "Jogo_A_Caixinha",
     featured: true,
     folder: "A_Caixinha_COMPLETO",
+    thumb: thumbSeries,
     files: [
       "Basicas.js",
       "FerramentasDemo.js",
