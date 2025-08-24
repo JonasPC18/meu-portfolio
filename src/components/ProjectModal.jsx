@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CodeBlock from "./CodeBlock";
 
 export default function ProjectModal({ project, onClose }) {
-
   const [selectedFile, setSelectedFile] = useState(null);
+
+  // Quando trocar de projeto, limpa o arquivo selecionado
+  useEffect(() => {
+    setSelectedFile(null);
+  }, [project]);
 
   if (!project) return null;
 
@@ -12,13 +16,19 @@ export default function ProjectModal({ project, onClose }) {
     setSelectedFile((curr) => (curr === file ? null : file));
 
   return (
-    <div className="fixed inset-0 z-40 bg-black/70 flex items-center justify-center">
+    <div
+      className="fixed inset-0 z-40 bg-black/70 flex items-center justify-center"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Projeto: ${project?.name || ""}`}
+    >
       <div className="bg-[#232946] w-full h-full sm:h-auto sm:max-h-[90vh] sm:max-w-3xl sm:rounded-2xl p-6 sm:p-8 shadow-xl relative flex flex-col overflow-y-auto sm:overflow-y-visible">
 
         {/* botão fechar */}
         <button
           onClick={onClose}
           className="absolute top-4 right-5 text-[#a6adc8] text-2xl font-bold hover:text-white"
+          aria-label="Fechar modal"
         >
           &times;
         </button>
@@ -64,7 +74,7 @@ export default function ProjectModal({ project, onClose }) {
         <div className="flex-1">
           {selectedFile ? (
             <CodeBlock
-              key={selectedFile}          /*zera o scroll */
+              key={selectedFile}          /* zera o scroll */
               folder={project.folder}
               file={selectedFile}
             />

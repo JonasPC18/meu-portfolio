@@ -9,6 +9,7 @@ import {
   SiHtml5,
   SiCss3,
   SiOpenjdk,
+  SiGithub,  
 } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
 import skills from "../data/skills";
@@ -22,6 +23,7 @@ const iconMap = {
   HTML: SiHtml5,
   CSS: SiCss3,
   VSCode: DiVisualstudio,
+  GitHub: SiGithub,
 };
 
 export default function Skills() {

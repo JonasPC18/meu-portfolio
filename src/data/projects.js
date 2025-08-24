@@ -4,6 +4,7 @@ import thumbSeries from "../assets/thumbs/series-watchbook-site.mp4";
 import thumbCaixinha from "../assets/thumbs/caixinha-site.mp4";
 import thumbPomodoro from "../assets/thumbs/pomodoro-site.mp4";
 import thumbMeteoro from "../assets/thumbs/meteoro-site.mp4";
+import thumbPortfolio from "../assets/thumbs/portfolio-site.mp4";
 
 const projects = [
   {
@@ -88,6 +89,7 @@ const projects = [
     name: "Portfólio",
     featured: true,
     folder: "meu-portfolio",
+    thumb: thumbPortfolio,
     files: [
       "CodeBlock.jsx",
       "Header.jsx",

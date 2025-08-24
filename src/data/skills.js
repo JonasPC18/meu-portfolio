@@ -6,7 +6,8 @@ const skills = [
   "Python",
   "HTML",
   "CSS",
-  "VSCode"
+  "VSCode",
+  "GitHub"
 ];
 
 export default skills; 
