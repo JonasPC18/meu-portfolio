@@ -41,6 +41,16 @@ export default function ProjectModal({ project, onClose }) {
           {project.description}
         </p>
 
+        {/* título da seção de componentes */}
+        {project.files?.length > 0 && (
+          <h5
+            className="text-xs sm:text-sm font-semibold text-[#a6adc8] uppercase tracking-wide mb-2"
+            aria-label="Principais componentes"
+          >
+            Principais componentes
+          </h5>
+        )}
+
         {/* lista de arquivos */}
         <div className="flex flex-wrap gap-2 mb-4">
           {project.files.map((f) => (

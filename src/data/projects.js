@@ -25,7 +25,7 @@ const projects = [
       Projeto de jogo de aventura em texto estilo "Zork", criado para a cadeira de Programação Orientada a Objetos do Curso de Análise e Desenvolvimento de Sistemas da PUCRS. O objetivo da atividade foi desenvolver minhas hábilidades em JavaScript e compreender o funcionamento da OOP.
     `,
     tech: ["JavaScript", "Node"],
-    link: "..."
+    link: "https://github.com/JonasPC18/caixinha"
     
   },
 
@@ -135,7 +135,7 @@ const projects = [
       Esse é um projeto acadêmico de lógica e programação de computadores focado em análise de dados meteorológicos. Este projeto foi desenvolvido em Python e faz uso principalmente da biblioteca matplotlib para geração de gráficos.
     `,
     tech: ["Python"],
-    link: "..."
+    link: "https://github.com/JonasPC18/dados-meteorologicos"
   },
 
 
