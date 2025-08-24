@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Endereços - MiniMercado Vizz</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header style="text-align: center; margin-top: 50px">
+      <img src="imagens/circulos.jpg" alt=""class="decor-circulos" width="460px"; >
+      <img src="imagens/logo.png" alt="Logo do MiniMercado Vizz" width="600" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="enderecos.html">Endereços</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+       <div class="flex-container1">
+      <img
+        id="banner"
+        src="imagens/banner2.jpg"
+        alt="Banner Rotativo"
+        width="500"
+        height="150"
+        style="object-fit: cover"
+      />
+      </div>
+    </header>
+
+    <main>
+    <h2><b>Endereços</b></h2>
+    <section>
+      <h3>Loja 1 - Menino Deus</h3>
+      <p>Rua Getúlio Vargas, 1234, Menino Deus, Porto Alegre</p>
+      <p>Horário de atendimento: das 7h às 21h</p>
+    </section>
+
+    <section>
+      <h3>Loja 2 - Petrópolis</h3>
+      <p>Avenida Protásio Alves, 5678, Bairro Petrópolis, Porto Alegre</p>
+      <p>Horário de atendimento: das 7h às 21h</p>
+    </section>
+    </main>
+
+
+    <footer>
+      <p>
+        E-mail:
+        <a href="mailto:minimercadovizz@gmail.com">minimercadovizz@gmail.com</a>
+      </p>
+      <p>Telefone: (XX) XXXXX-XXXX</p>
+      <p>MiniMercado Vizz - Todos os direitos reservados.</p>
+      <p>Site desenvolvido por Jonas Costa.</p>
+    </footer>
+    <script>
+      var vetor_banner = [
+        "imagens/banner2.jpg",
+        "imagens/banner1.jpg",
+        "imagens/banner3.jpg",
+        "imagens/banner4.jpg",
+      ];
+      var posicao_vetor = 0;
+
+      function func_banner() {
+        posicao_vetor = (posicao_vetor + 1) % vetor_banner.length;
+        document.getElementById("banner").src = vetor_banner[posicao_vetor];
+      }
+
+      setInterval(func_banner, 2000);
+    </script>
+  </body>
+</html>
