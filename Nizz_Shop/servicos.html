@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Serviços - MiniMercado Vizz</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header style="text-align: center; margin-top: 50px">
+      <img src="imagens/circulos.jpg" alt=""class="decor-circulos" width="460px"; >
+      <img src="imagens/logo.png" alt="Logo do MiniMercado Vizz" width="600" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="enderecos.html">Endereços</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+      <div class="flex-container1">
+      <img
+        id="banner"
+        src="imagens/banner4.jpg"
+        alt="Banner Rotativo"
+        width="500"
+        height="150"
+        style="object-fit: cover"
+      />
+      </div>
+    </header>
+
+    <h2><b>Serviços</b></h2>
+    <section>
+      <article>
+        <h3>Retirada no Local</h3>
+        <p>Faça seu pedido online e retire os produtos no balcão.</p>
+        <p>Valor: Gratuito</p>
+      </article>
+      <article>
+        <h3>Tele-Entrega</h3>
+        <p>
+          Entregamos no endereço cadastrado, conforme disponibilidade de
+          horários.
+        </p>
+        <p>Valor: R$ 10,00</p>
+      </article>
+    </section>
+
+    <section>
+      <h3>Agendamento</h3>
+      <p>
+        Para agendar a Retirada ou a Tele-Entrega, preencha o formulário abaixo:
+      </p>
+
+      <form action="obrigado2.html" method="GET">
+        <label for="tipo-servico">Escolha o serviço:</label><br />
+        <select id="tipo-servico" name="tipo-servico" required>
+          <option value="" disabled selected>Selecione...</option>
+          <option value="Retirada no Local">Retirada no Local</option>
+          <option value="Tele-Entrega">Tele-Entrega</option>
+        </select>
+        <br /><br />
+
+        <label for="data-agendamento">Data:</label><br />
+        <input
+          type="date"
+          id="data-agendamento"
+          name="dataAgendamento"
+          required
+        />
+        <br /><br />
+
+        <label for="hora-agendamento">Hora:</label><br />
+        <input
+          type="time"
+          id="hora-agendamento"
+          name="horaAgendamento"
+          required
+        />
+        <br /><br />
+
+        <button type="submit">Agendar</button>
+      </form>
+    </section>
+
+
+    <footer>
+      <p>
+        E-mail:
+        <a href="mailto:minimercadovizz@gmail.com">minimercadovizz@gmail.com</a>
+      </p>
+      <p>Telefone: (XX) XXXXX-XXXX</p>
+      <p>MiniMercado Vizz - Todos os direitos reservados.</p>
+      <p>Site desenvolvido por Jonas Costa.</p>
+    </footer>
+    <script>
+      var vetor_banner = [
+        "imagens/banner4.jpg",
+        "imagens/banner2.jpg",
+        "imagens/banner3.jpg",
+        "imagens/banner1.jpg",
+      ];
+      var posicao_vetor = 0;
+
+      function func_banner() {
+        posicao_vetor = (posicao_vetor + 1) % vetor_banner.length;
+        document.getElementById("banner").src = vetor_banner[posicao_vetor];
+      }
+
+      setInterval(func_banner, 2000);
+    </script>
+  </body>
+</html>

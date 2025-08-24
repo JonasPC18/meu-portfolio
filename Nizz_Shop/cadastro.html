@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Cliente - MiniMercado Vizz</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header style="text-align: center; margin-top: 50px">
+      <img src="imagens/circulos.jpg" alt=""class="decor-circulos" width="460px"; >
+      <img src="imagens/logo.png" alt="Logo do MiniMercado Vizz" width="600" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="enderecos.html">Endereços</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+            <div class="flex-container1">
+      <img
+        id="banner"
+        src="imagens/banner3.jpg"
+        alt="Banner Rotativo"
+        width="500"
+        height="150"
+        style="object-fit: cover"
+      />
+            </div>
+    </header>
+
+    <main>
+      <h2><b>Cadastro de Cliente</b></h2>
+      <p>Preencha os campos abaixo para realizar seu cadastro:</p>
+
+      <form action="obrigado1.html" method="GET">
+        <!-- Nome -->
+        <label for="nome">Nome Completo:</label><br />
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome completo"
+          required
+        /><br /><br />
+
+        <!-- Endereço -->
+        <label for="endereco">Endereço:</label><br />
+        <input
+          type="text"
+          id="endereco"
+          name="endereco"
+          placeholder="Rua, Número, Bairro, Cidade"
+          required
+        /><br /><br />
+
+        <!-- CPF -->
+        <label for="cpf">CPF:</label><br />
+        <input
+          type="text"
+          id="cpf"
+          name="cpf"
+          placeholder="Ex: 000.000.000-00"
+          required
+          maxlength="14"
+        /><br /><br />
+
+        <!-- Sexo -->
+        <label>Sexo:</label><br />
+        <input
+          type="radio"
+          id="masculino"
+          name="sexo"
+          value="Masculino"
+          required
+        />
+        <label for="masculino">Masculino</label>
+        <br />
+        <input
+          type="radio"
+          id="feminino"
+          name="sexo"
+          value="Feminino"
+          required
+        />
+        <label for="feminino">Feminino</label>
+        <br />
+        <input type="radio" id="outro" name="sexo" value="Outro" required />
+        <label for="outro">Outro</label>
+        <br /><br />
+
+        <!-- Telefone -->
+        <label for="telefone">Telefone:</label><br />
+        <input
+          type="tel"
+          id="telefone"
+          name="telefone"
+          placeholder="(XX) XXXXX-XXXX"
+          required
+        /><br /><br />
+
+        <!-- E-mail -->
+        <label for="email">E-mail:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="exemplo@provedor.com"
+          required
+        /><br /><br />
+
+        <!-- Data de Nascimento -->
+        <label for="data_nascimento">Data de Nascimento:</label><br />
+        <input
+          type="date"
+          id="data_nascimento"
+          name="data_nascimento"
+          required
+        /><br /><br />
+
+        <!-- receber promoções -->
+        <input
+          type="checkbox"
+          id="receber_novidades"
+          name="receber_novidades"
+          value="Sim"
+        />
+        <label for="receber_novidades"
+          >Desejo receber novidades por e-mail</label
+        >
+        <br /><br />
+
+        <!-- Observações -->
+        <label for="observacoes">Observações:</label><br />
+        <textarea
+          id="observacoes"
+          name="observacoes"
+          rows="4"
+          cols="50"
+          placeholder="Se desejar, deixe uma observação..."
+        ></textarea>
+        <br /><br />
+
+        <button type="submit">Enviar Cadastro.</button>
+      </form>
+    </main>
+
+
+    <footer>
+      <p>
+        E-mail:
+        <a href="mailto:minimercadovizz@gmail.com">minimercadovizz@gmail.com</a>
+      </p>
+      <p>Telefone: (XX) XXXXX-XXXX</p>
+      <p>MiniMercado Vizz - Todos os direitos reservados.</p>
+      <p>Site desenvolvido por Jonas Costa.</p>
+    </footer>
+    <script>
+      var vetor_banner = [
+        "imagens/banner3.jpg",
+        "imagens/banner4.jpg",
+        "imagens/banner1.jpg",
+        "imagens/banner2.jpg",
+      ];
+      var posicao_vetor = 0;
+
+      function func_banner() {
+        posicao_vetor = (posicao_vetor + 1) % vetor_banner.length;
+        document.getElementById("banner").src = vetor_banner[posicao_vetor];
+      }
+
+      setInterval(func_banner, 2000);
+    </script>
+  </body>
+</html>
