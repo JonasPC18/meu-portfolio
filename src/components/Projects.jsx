@@ -7,15 +7,19 @@ import Box from "./Box";
 export default function Projects() {
   const [selected, setSelected] = useState(null);
 
-  // Animação dos cards
+  // Animação dos cards (suave e dispara mais cedo)
   const cardVariants = {
-    hidden:  { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 12 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.35, ease: "easeOut" },
+    },
   };
 
   // Separa em projetos destaque e demais
   const featured = projects.filter((p) => p.featured);
-  const others   = projects.filter((p) => !p.featured);
+  const others = projects.filter((p) => !p.featured);
 
   const renderCard = (proj, i) => (
     <motion.div
@@ -23,30 +27,29 @@ export default function Projects() {
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1  }}
       transition={{ delay: i * 0.1 }}
       className="bg-[#232946] rounded-2xl p-6 shadow-md flex flex-col"
     >
-
-{proj.thumb && (
-  <div className="relative aspect-video rounded-xl overflow-hidden mb-4 bg-black/40">
-    <video
-      src={proj.thumb}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      disablePictureInPicture
-      controls={false}
-      controlsList="nodownload noplaybackrate noremoteplayback nofullscreen"
-      className="h-full w-full object-cover pointer-events-none select-none"
-      tabIndex={-1}
-      aria-hidden="true"
-      onContextMenu={(e) => e.preventDefault()}
-    />
-  </div>
-)}
+      {proj.thumb && (
+        <div className="relative aspect-video rounded-xl overflow-hidden mb-4 bg-black/40">
+          <video
+            src={proj.thumb}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            disablePictureInPicture
+            controls={false}
+            controlsList="nodownload noplaybackrate noremoteplayback nofullscreen"
+            className="h-full w-full object-cover pointer-events-none select-none"
+            tabIndex={-1}
+            aria-hidden="true"
+            onContextMenu={(e) => e.preventDefault()}
+          />
+        </div>
+      )}
 
       <h4 className="text-xl font-semibold text-white mb-2">
         {proj.name}
@@ -80,12 +83,12 @@ export default function Projects() {
     <motion.section
       id="projects"
       className="py-12"
-      initial={{ opacity: 0, y: 40 }}np
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.05, margin: "200px 0px 200px 0px" }}
+      transition={{ duration: 0.45, ease: "easeOut" }}
     >
-{/* —— PROJETOS EM DESTAQUE —— */}
+      {/* —— PROJETOS EM DESTAQUE —— */}
       {featured.length > 0 && (
         <Box variant="highlight" className="mb-12">
           <h3 className="text-2xl font-bold mb-6 text-[#7f5af0]">

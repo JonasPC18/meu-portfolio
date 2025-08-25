@@ -43,7 +43,8 @@ const projects = [
       Este projeto é um pequeno CRUD de séries feito em React para a cadeira de Frontend do curso de ADS da PUCRS. Ele permite cadastrar, listar e excluir séries armazenando os dados no localStorage do navegador. A navegação é feita com react-router-dom usando Hash Router
     `,
     tech: ["JavaScript", "React", "Html", "Bootstrap"],
-    link: "https://jonaspc18.github.io/series-watchbook/"
+    site: "https://jonaspc18.github.io/series-watchbook/",
+    link: "https://github.com/JonasPC18/series-watchbook"
   },
 
     {
@@ -63,7 +64,8 @@ const projects = [
       Projeto de MiniMercado para disciplina de Sistemas Web da PUCRS. O site foi feito sem framework, utilizando apenas HTML, Css, Javascript e Bootstrap. A tela não é responsiva para formato mobile.
     `,
     tech: ["Javascript","Html", "Css","Bootstrap"],
-    link: "https://jonaspc18.github.io/Nizz_Shop/"
+    site: "https://jonaspc18.github.io/Nizz_Shop/",
+    link: "https://github.com/JonasPC18/Nizz_Shop/"
   },
 
     {
@@ -82,7 +84,8 @@ const projects = [
       Exercício feito para o site "Frontend Mentor". O desafio consistiu na criação de um app de timer pomodoro.
     `,
     tech: ["JavaScript", "Html", "Css", "React"],
-    link: "https://jonaspc18.github.io/pomodoro/"
+    site: "https://jonaspc18.github.io/pomodoro/",
+    link: "https://github.com/JonasPC18/pomodoro/"
   },
 
     {
@@ -102,7 +105,8 @@ const projects = [
       O projeto do meu portifólio pessoal foi desenvolvido em React, utilizando Tailwind CSS para estilização. As animações e transições são feitas com Framer Motion, enquanto a exibição de código dentro dos modais é implementada com Prism.js.
     `,
     tech: ["JavaScript", "Html", "Tailwind", "React"],
-    link: "https://jonaspc18.github.io/meu-portfolio/"
+    site: "https://jonaspc18.github.io/meu-portfolio/",
+    link: "https://github.com/JonasPC18/meu-portfolio/"
   },
 
     {
@@ -120,7 +124,8 @@ const projects = [
       Site para o projeto artístico "Ditto Morto". Desenvolvido em React. Ele também emprega React Hooks (useState, useEffect, useRef) para gerenciar estados, ciclos de vida e referências de elementos. Para a galeria de quadrinhos, é utilizado a biblioteca Swiper.js.
     `,
     tech: ["JavaScript", "Html", "Css", "React"],
-    link: "https://jonaspc18.github.io/Ditto-Morto/"
+    site: "https://jonaspc18.github.io/Ditto-Morto/",
+    link: "https://github.com/JonasPC18/Ditto-Morto/"
   },
 
       {

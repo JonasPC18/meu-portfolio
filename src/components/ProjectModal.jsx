@@ -11,6 +11,12 @@ export default function ProjectModal({ project, onClose }) {
 
   if (!project) return null;
 
+  // Detecta URLs de site e GitHub (com fallback para "link")
+  const siteUrl =
+    project.site ||
+    (project.link && !project.link.includes("github.com") ? project.link : null);
+  const isGithubLink = project.github || project.link?.includes("github.com");
+
   // alterna: clica uma vez e abre / clica de novo e fecha
   const toggleFile = (file) =>
     setSelectedFile((curr) => (curr === file ? null : file));
@@ -37,14 +43,31 @@ export default function ProjectModal({ project, onClose }) {
         <h4 className="text-2xl font-bold mb-3 text-[#7f5af0]">
           {project.name}
         </h4>
-        <p className="text-[#eaeaea] whitespace-pre-line mb-4 text-justify">
+        <p className="text-[#eaeaea] whitespace-pre-line mb-3 text-justify">
           {project.description}
         </p>
+
+        {/* Link do site centralizado dentro de uma "caixinha" */}
+        {siteUrl && (
+          <div className="mb-5 flex justify-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 ring-1 ring-[#2CBDFE]/25 shadow-sm">
+              <span className="text-[#a6adc8] font-medium select-none">Link:</span>
+              <a
+                href={siteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2CBDFE] hover:underline underline-offset-4 decoration-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2CBDFE]/40 break-all transition"
+              >
+                {siteUrl}
+              </a>
+            </div>
+          </div>
+        )}
 
         {/* título da seção de componentes */}
         {project.files?.length > 0 && (
           <h5
-            className="text-xs sm:text-sm font-semibold text-[#a6adc8] uppercase tracking-wide mb-2"
+            className="text-xs sm:text-sm font-semibold text-[#a6adc8] uppercase tracking-wide mb-2 text-center sm:text-left"
             aria-label="Principais componentes"
           >
             Principais componentes
@@ -53,7 +76,7 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* lista de arquivos */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.files.map((f) => (
+          {(project.files || []).map((f) => (
             <button
               key={f}
               onClick={() => toggleFile(f)}
@@ -68,13 +91,13 @@ export default function ProjectModal({ project, onClose }) {
           ))}
         </div>
 
-        {/* link GitHub */}
-        {project.link && (
+        {/* link GitHub (mantido no mesmo lugar) */}
+        {(project.github || isGithubLink) && (
           <a
-            href={project.link}
+            href={project.github || project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="mb-4 inline-block text-[#7f5af0] underline hover:text-white"
+            className="mb-4 inline-block text-[#7f5af0] underline hover:text-white break-all"
           >
             Ver no GitHub
           </a>
