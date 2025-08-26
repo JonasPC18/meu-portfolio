@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/meu-portfolio/static/css/main.cd721fd1.css",
-    "main.js": "/meu-portfolio/static/js/main.0c9c9a33.js",
+    "main.css": "/meu-portfolio/static/css/main.cf77c13a.css",
+    "main.js": "/meu-portfolio/static/js/main.71a25f10.js",
     "static/js/453.f50d33b3.chunk.js": "/meu-portfolio/static/js/453.f50d33b3.chunk.js",
     "static/media/ditto-morto-site.mp4": "/meu-portfolio/static/media/ditto-morto-site.af852480d77166794f5c.mp4",
     "static/media/series-watchbook-site.mp4": "/meu-portfolio/static/media/series-watchbook-site.8674b8f8a5ebb1fcfd88.mp4",
@@ -13,12 +13,12 @@
     "static/media/pomodoro-site.mp4": "/meu-portfolio/static/media/pomodoro-site.8d596400c1233afa0a33.mp4",
     "static/media/profile.jpg": "/meu-portfolio/static/media/profile.bb22af508da1c47bf441.jpg",
     "index.html": "/meu-portfolio/index.html",
-    "main.cd721fd1.css.map": "/meu-portfolio/static/css/main.cd721fd1.css.map",
-    "main.0c9c9a33.js.map": "/meu-portfolio/static/js/main.0c9c9a33.js.map",
+    "main.cf77c13a.css.map": "/meu-portfolio/static/css/main.cf77c13a.css.map",
+    "main.71a25f10.js.map": "/meu-portfolio/static/js/main.71a25f10.js.map",
     "453.f50d33b3.chunk.js.map": "/meu-portfolio/static/js/453.f50d33b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd721fd1.css",
-    "static/js/main.0c9c9a33.js"
+    "static/css/main.cf77c13a.css",
+    "static/js/main.71a25f10.js"
   ]
 }
