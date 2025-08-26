@@ -28,7 +28,7 @@ export default function ProjectModal({ project, onClose }) {
       aria-modal="true"
       aria-label={`Projeto: ${project?.name || ""}`}
     >
-      <div className="bg-[#232946] w-full h-full sm:h-auto sm:max-h-[90vh] sm:max-w-3xl sm:rounded-2xl p-6 sm:p-8 shadow-xl relative flex flex-col overflow-y-auto sm:overflow-y-visible">
+      <div className="bg-[#232946] w-full sm:max-w-3xl rounded-2xl p-6 sm:p-8 shadow-xl relative flex flex-col max-h-[90dvh] overflow-y-auto">
 
         {/* botão fechar */}
         <button
@@ -104,7 +104,7 @@ export default function ProjectModal({ project, onClose }) {
         )}
 
         {/* área do código */}
-        <div className="flex-1">
+        <div className="flex-1 min-h-0 pb-2">
           {selectedFile ? (
             <CodeBlock
               key={selectedFile}          /* zera o scroll */
