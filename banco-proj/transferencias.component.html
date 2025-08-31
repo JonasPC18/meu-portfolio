@@ -1,0 +1,94 @@
+<div class="card">
+  <h1>Transferência</h1>
+
+  <p *ngIf="enviado() as b" class="banner" [class.ok]="b.ok" [class.err]="!b.ok">
+    {{ b.msg }}
+    <button class="x" type="button" (click)="enviado.set(null)" aria-label="Fechar">×</button>
+  </p>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+    <div class="field">
+      <label>Tipo</label>
+      <div class="segmented">
+        <label><input type="radio" value="PIX" formControlName="tipo" /> PIX</label>
+        <label><input type="radio" value="TED" formControlName="tipo" /> TED</label>
+      </div>
+    </div>
+
+    <!-- Campos para PIX -->
+    <div formGroupName="pix" *ngIf="form.get('tipo')?.value === 'PIX'">
+      <div class="field">
+        <label for="chave">Chave PIX</label>
+        <input
+          id="chave"
+          type="text"
+          formControlName="chavePix"
+          placeholder="CPF, e-mail, telefone ou chave aleatória"
+        />
+        <small class="err" *ngIf="form.get('pix.chavePix')?.touched && form.get('pix.chavePix')?.invalid">
+          Informe a chave PIX do destinatário.
+        </small>
+      </div>
+    </div>
+
+    <!-- Campos para TED -->
+    <div formGroupName="ted" *ngIf="form.get('tipo')?.value === 'TED'">
+      <div class="grid">
+        <div class="field">
+          <label for="banco">Código do banco</label>
+          <input id="banco" type="text" formControlName="bancoCodigo" placeholder="Ex.: 001, 237, 341..." />
+          <small class="err" *ngIf="form.get('ted.bancoCodigo')?.touched && form.get('ted.bancoCodigo')?.invalid">
+            Informe o código do banco.
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="ag">Agência</label>
+          <input id="ag" type="text" formControlName="agencia" placeholder="Ex.: 0001" />
+          <small class="err" *ngIf="form.get('ted.agencia')?.touched && form.get('ted.agencia')?.invalid">
+            Informe a agência.
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="cc">Conta</label>
+          <input id="cc" type="text" formControlName="conta" placeholder="Ex.: 123456-7" />
+          <small class="err" *ngIf="form.get('ted.conta')?.touched && form.get('ted.conta')?.invalid">
+            Informe a conta.
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="cpf">CPF/CNPJ do titular</label>
+          <input id="cpf" type="text" formControlName="cpfCnpj" placeholder="Somente números" />
+          <small class="err" *ngIf="form.get('ted.cpfCnpj')?.touched && form.get('ted.cpfCnpj')?.invalid">
+            Informe o CPF/CNPJ do titular.
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="valor">Valor</label>
+      <input id="valor" type="number" min="0" step="0.01" formControlName="valor" placeholder="0,00" />
+      <small class="err" *ngIf="form.get('valor')?.touched && form.get('valor')?.invalid">
+        Informe um valor maior que zero.
+      </small>
+    </div>
+
+    <div class="field">
+      <label for="data">Data</label>
+      <input id="data" type="date" formControlName="data" />
+    </div>
+
+    <div class="field">
+      <label for="desc">Descrição (opcional)</label>
+      <input id="desc" type="text" formControlName="descricao" placeholder="Ex.: Aluguel, reembolso..." />
+    </div>
+
+    <div class="actions">
+      <button class="primary" type="submit">Confirmar</button>
+      <button class="ghost" type="button" (click)="limpar()">Limpar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+<div class="page">
+  <section class="card saldo-card">
+    <div class="saldo-top">
+      <div>
+        <h1 class="titulo">Saldo disponível</h1>
+      </div>
+      <button class="ghost" (click)="toggleMostrar()" aria-label="Mostrar/ocultar saldo">
+        {{ mostrar() ? 'Ocultar' : 'Mostrar' }}
+      </button>
+    </div>
+
+    <div class="saldo-valor">
+      <ng-container *ngIf="mostrar(); else oculto">
+        {{ saldo() | currency:'BRL':'symbol':'1.2-2' }}
+      </ng-container>
+      <ng-template #oculto>••••••</ng-template>
+    </div>
+
+    <nav class="saldo-actions">
+      <a class="btn primary" routerLink="/transferencias">Transferir PIX</a>
+      <a class="btn" routerLink="/pagamentos">Pagar boleto</a>
+      <a class="btn" routerLink="/cartoes">Cartões</a>
+    </nav>
+  </section>
+</div>
