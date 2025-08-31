@@ -1,0 +1,41 @@
+<div class="card">
+  <h1>Pagamento de Boleto</h1>
+
+  <p *ngIf="msg() as m" class="banner" [class.ok]="m.ok" [class.err]="!m.ok">
+    {{ m.text }}
+    <button class="x" type="button" (click)="msg.set(null)" aria-label="Fechar">×</button>
+  </p>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+    <div class="field">
+      <label for="linha">Linha digitável / Código de barras</label>
+      <input id="linha" type="text" formControlName="linha" placeholder="Digite ou cole aqui" />
+      <small class="err" *ngIf="form.get('linha')?.touched && form.get('linha')?.invalid">
+        Informe a linha digitável.
+      </small>
+    </div>
+
+    <div class="field">
+      <label for="valor">Valor</label>
+      <input id="valor" type="number" min="0" step="0.01" formControlName="valor" placeholder="0,00" />
+      <small class="err" *ngIf="form.get('valor')?.touched && form.get('valor')?.invalid">
+        Informe um valor maior que zero.
+      </small>
+    </div>
+
+    <div class="field">
+      <label for="data">Data de pagamento</label>
+      <input id="data" type="date" formControlName="data" />
+    </div>
+
+    <div class="field">
+      <label for="desc">Descrição (opcional)</label>
+      <input id="desc" type="text" formControlName="descricao" placeholder="Ex.: Conta de luz..." />
+    </div>
+
+    <div class="actions">
+      <button class="primary" type="submit">Confirmar</button>
+      <button class="ghost" type="button" (click)="limpar()">Limpar</button>
+    </div>
+  </form>
+</div>

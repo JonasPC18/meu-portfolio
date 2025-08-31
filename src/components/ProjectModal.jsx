@@ -47,7 +47,7 @@ export default function ProjectModal({ project, onClose }) {
           {project.description}
         </p>
 
-        {/* Link do site centralizado dentro de uma "caixinha" */}
+        {/* Link do site centralizado dentro de uma caixinha*/}
         {siteUrl && (
           <div className="mb-5 flex justify-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 ring-1 ring-[#2CBDFE]/25 shadow-sm">
@@ -91,7 +91,7 @@ export default function ProjectModal({ project, onClose }) {
           ))}
         </div>
 
-        {/* link GitHub (mantido no mesmo lugar) */}
+        {/* link GitHub  */}
         {(project.github || isGithubLink) && (
           <a
             href={project.github || project.link}

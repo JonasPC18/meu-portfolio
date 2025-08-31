@@ -5,6 +5,7 @@ import thumbCaixinha from "../assets/thumbs/caixinha-site.mp4";
 import thumbPomodoro from "../assets/thumbs/pomodoro-site.mp4";
 import thumbMeteoro from "../assets/thumbs/meteoro-site.mp4";
 import thumbPortfolio from "../assets/thumbs/portfolio-site.mp4";
+import thumbBanco from "../assets/thumbs/banco-site.mp4";
 
 const projects = [
   {
@@ -45,6 +46,28 @@ const projects = [
     tech: ["JavaScript", "React", "Html", "Bootstrap"],
     site: "https://jonaspc18.github.io/series-watchbook/",
     link: "https://github.com/JonasPC18/series-watchbook"
+  },
+
+      {
+    name: "Banking Online (em construção)",
+    featured: true, 
+    folder: "banco-proj",
+    thumb: thumbBanco,
+    files: [
+      "balance.service.ts",
+      "home.component.html",
+      "home.component.ts",
+      "pagamentos.component.html",
+      "pagamentos.component.ts",
+      "transferencias.component.html",
+      "transferencias.component.ts",
+    ],
+    description: `
+      Estou fazendo esse projeto para praticar e aprender o framework "Angular". O projeto consiste em um Internet Banking simples.
+    `,
+    tech: ["TypeScript", "Angular", "Html", "SCSS"],
+    site: "https://jonaspc18.github.io/banco-proj/",
+    link: "https://github.com/JonasPC18/banco-proj"
   },
 
     {

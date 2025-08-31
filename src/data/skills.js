@@ -1,11 +1,11 @@
 const skills = [
-  "Java",
   "JavaScript",
   "React",
   "Node.js",
   "Python",
   "HTML",
   "CSS",
+  "Java",
   "VSCode",
   "GitHub"
 ];
