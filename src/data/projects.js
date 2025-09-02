@@ -106,7 +106,7 @@ const projects = [
     description: `
       Exercício feito para o site "Frontend Mentor". O desafio consistiu na criação de um app de timer pomodoro.
     `,
-    tech: ["JavaScript", "Html", "Css", "React"],
+    tech: ["JavaScript", "Html", "Tailwind", "React"],
     site: "https://jonaspc18.github.io/pomodoro/",
     link: "https://github.com/JonasPC18/pomodoro/"
   },
